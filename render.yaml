@@ -1,0 +1,15 @@
+# Blueprint do Render: API com os modelos (plano grátis).
+services:
+  - type: web
+    name: avocadocheck-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn cloud_server:api --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/info
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: ALLOWED_ORIGINS
+        value: "*"

@@ -1,0 +1,9 @@
+# Site estático: só publica a pasta web (sem build).
+[build]
+  publish = "web"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "camera=(self)"
