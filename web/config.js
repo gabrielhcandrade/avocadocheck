@@ -3,4 +3,4 @@
  * Para o Netlify, coloque a URL do Render, por exemplo:
  *   window.AVOCHECK_API = 'https://avocadocheck-api.onrender.com';
  */
-window.AVOCHECK_API = '';
+window.AVOCHECK_API = 'https://avocadocheck-api.onrender.com';
