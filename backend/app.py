@@ -563,7 +563,7 @@ def stage_probability_chart(row: pd.Series):
 def run_app() -> None:
     import streamlit as st
 
-    st.set_page_config(page_title="Para onde vai este lote?", page_icon="🥑", layout="wide",
+    st.set_page_config(page_title="Ripen", page_icon=str(HERE / "ripen.png"), layout="wide",
                        initial_sidebar_state="collapsed")
     st.markdown(CSS, unsafe_allow_html=True)
     cli = parse_cli()
