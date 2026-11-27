@@ -1,4 +1,4 @@
-/* AvocadoCheck: mobile web app for the Hass avocado ripening PoC.
+/* Ripen (antigo AvocadoCheck): mobile web app for the Hass avocado ripening PoC.
  * Talks to server.py (/api/info, /api/analyze). History, profile and settings
  * live in this device's localStorage. */
 
@@ -362,7 +362,7 @@ const SCREENS = {};
 
 SCREENS.splash = {
   html: () => `<section class="screen splash-land">
-    <div class="brand">${logoMark(78, false)}<h2>Avocado<span>Check</span></h2>
+    <div class="brand">${logoMark(78, false)}<h2>Ripen</h2>
     <p>Tecnologia que ajuda o seu abacate a chegar mais longe.</p>
     <p id="wake" class="wake" hidden><span class="spinner"></span>Conectando ao servidor. Na primeira vez do dia isso pode levar até 1 minuto.</p></div>
     <img class="land" src="assets/landscape.jpg" alt=""></section>`,
@@ -371,7 +371,7 @@ SCREENS.splash = {
 SCREENS.welcome = {
   html: () => `<section class="screen welcome">
     <div class="photo" role="img" aria-label="Abacate Hass no pé"></div>
-    <div class="brand">${logoMark(72, true)}<h2>Avocado<span>Check</span></h2><p>Do campo ao mercado, no ponto certo.</p></div>
+    <div class="brand">${logoMark(72, true)}<h2>Ripen</h2><p>Do campo ao mercado, no ponto certo.</p></div>
     <div class="cta"><button class="btn btn-primary" id="start">Começar ${icon('arrowRight', 20)}</button></div></section>`,
   mount() {
     $('#start').addEventListener('click', () => {
@@ -884,7 +884,7 @@ SCREENS.about = {
     const pct = (v) => (v == null ? '—' : Math.round(v * 100) + '%');
     return `<section class="screen">${topbar('Sobre o app', { left: true, backTo: 'profile' })}<div class="scroll article">
       <div class="center" style="margin:8px 0 6px">${logoMark(60, false)}</div>
-      <h2 class="center">AvocadoCheck</h2><p class="center muted" style="margin-top:-6px">Versão ${(S.info && S.info.version) || '1.0.0'}</p>
+      <h2 class="center">Ripen</h2><p class="center muted" style="margin-top:-6px">Versão ${(S.info && S.info.version) || '1.0.0'}</p>
       <p>Prova de conceito da disciplina SIN 323 (Inteligência Artificial, UFV) para decidir o destino de lotes de abacate Hass a partir de fotos.</p>
       <h3>Como funciona</h3><ul><li>Detector de frutos: ${esc((S.info && S.info.detector) || 'YOLO')}</li>
         <li>Estágio de maturação: ${esc((S.info && S.info.models.stage) || '—')}</li><li>Dias restantes: ${esc((S.info && S.info.models.days) || '—')}</li></ul>

@@ -1,4 +1,6 @@
-# AvocadoCheck
+# Ripen
+
+App de maturação e destino de lotes de abacate Hass (antes chamado AvocadoCheck).
 
 App de celular que estima a maturação de abacates Hass por foto e recomenda o destino do lote.
 Projeto da disciplina SIN 323 (Inteligência Artificial, UFV).
